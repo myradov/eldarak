@@ -1,9 +1,11 @@
 html,
 body {
+  font-size: 16px;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
+    /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 a {
@@ -13,4 +15,54 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+/* Swiper */
+.swiper-container{
+  background-color: chocolate;
+  display: block;
+  --swiper-navigation-size: 32px !important;
+}
+
+.swiper-wrapper{
+  background-color: cyan;
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center !important;
+  box-sizing: border-box;
+}
+
+.swiper-slide{
+  display: block;
+  background-color: violet;
+}
+.swiper-slide > div:first-child{
+  display: block !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  background-color: rgba(182, 47, 47, 0.378);
+  padding: 2em;
+  border-radius: 50%;
+  width: 100px;
+}
+.swiper-pagination-bullet{
+  background-color: yellowgreen !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+img{
+  position: relative;
+  display: block;
+}
+
+.swiper-button-prev:after{
+  width: 32px !important;
+}
+/* .swiper-button-next{
+  background-color: brown;
+} */

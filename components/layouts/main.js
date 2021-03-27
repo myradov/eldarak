@@ -1,16 +1,16 @@
 import Head from 'next/head'
 // import Link from 'next/link'
-// import styles from './layout.module.css'
+import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
-import Navigation from '../Navigation'
-import Footer from '../footer'
+import Header from '../Header'
+import Footer from '../Footer'
 
 const name = "ED"
 export const siteTitle = "Sample Website"
 
 export default function MainLayout({ children }) {
     return (
-        <div className="bg-red-100 w-full mx-auto">
+        <>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -27,9 +27,9 @@ export default function MainLayout({ children }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <title>{siteTitle}</title>  
             </Head>
-            <Navigation />
-            <main className="relative w-full h-auto py-20 bg-purple-600">{children}</main>
+            <Header />
+            <main id={styles.container}>{children}</main>
             <Footer />
-        </div>
+        </>
     )
 }
