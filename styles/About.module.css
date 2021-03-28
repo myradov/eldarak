@@ -3,8 +3,10 @@
     display: block;
     width: 100%;
     height: auto;
-    background-color: blueviolet;
-    padding: 80px 20px;
+    background-color: black;
+    /* padding: 70px 0px; */
+    padding-top: 60px;
+    padding-bottom: 80px;
 }
 
 .title{
@@ -12,13 +14,13 @@
     display: flex;
     width: 100%;
     height: 80px;
-    background-color: cadetblue;
-    justify-content: flex-start;
+    background-color: rgb(10 12 14);
+    justify-content: center;
     align-items: center;
+    color: white;
     /* padding: 0 20px; */
 }
 .title > h2{
-    text-align: left;
     text-transform: uppercase;
     font-size: 1.3rem;
     font-style: normal;
@@ -33,18 +35,40 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: chocolate;
+    /* background-color: rgb(10 12 14); */
+    color: white;
 }
 
 .article > div{
     display: block;
 }
 
+.article > div:first-child{
+    max-width: 60%;
+    padding: 0 40px;
+    z-index: 2;
+}
+
 .article h2{
-    color: green;
     font-weight: normal;
     font-size: 2rem;
+    margin:0;
+    margin-bottom: .5em;
 }
 .article p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin-bottom: .5em;
+    /* letter-spacing: 1px; */
+}
+
+.bgShadow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    width: 40%;
+    height: 75%;
+    background-color: rgb(10 12 14);
+    z-index: 1;
 }
