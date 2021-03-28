@@ -7,6 +7,9 @@ import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Link from 'next/link';
 
+// components
+import News from '../components/News'
+
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y]);
@@ -30,9 +33,9 @@ export default function Home() {
         <div className={styles.bgLogo}>
           <Image 
             alt="ED logo"
-            src="/vercel.svg"
-            width={300}
-            height={300}
+            src="/ellogo3.svg"
+            width={150}
+            height={150}
           />
           {/* <img src="vercel.svg" alt="logo"/> */}
         </div>
@@ -127,11 +130,13 @@ export default function Home() {
           {/* <SwiperSlide><img src="bg.jpg" alt="" width={400}/></SwiperSlide> */}
         </Swiper>
       </main>
-
-      <section>
-        hello
+      <section className={styles.card}>
+        <h1 className={styles.title}>News</h1>  
+      </section>   
+      <section className={styles.sections}>
+        <News />
       </section>
-
+     
     </div>
   )
 }

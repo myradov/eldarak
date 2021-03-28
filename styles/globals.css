@@ -44,11 +44,14 @@ a {
 }
 
 .swiper-button-prev, .swiper-button-next{
-  background-color: rgba(182, 47, 47, 0.378);
+  background-color: rgba(243, 220, 220, 0.378);
   padding: 2em;
   border-radius: 50%;
   width: 100px;
+  color: black !important;
 }
+
+
 .swiper-pagination-bullet{
   background-color: yellowgreen !important;
   width: 10px !important;

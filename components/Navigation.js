@@ -22,31 +22,31 @@ export default function Navigation(){
                 <div className={styles.logo}>
                     <Link href="/">
                         <a>
-                            <img src="vercel.svg" alt="El Darak Logo" width={100}/>
+                            <img src="ellogo2.svg" alt="El Darak Logo" width={100} height={40}/>
                         </a>
                     </Link>
                 </div> 
                 <ul className={styles.menulist}>
                     <li>
-                        <a href="#about">About Us</a>
+                        <a href="/about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#news">Revival</a>
+                    </li>
+                    <li>
+                        <a href="#about">Articles</a>
                     </li>
                     <li>
                         <a href="#news">News</a>
                     </li>
                     <li>
-                        <a href="#about">About Us</a>
+                        <a href="#about">Persona</a>
                     </li>
                     <li>
-                        <a href="#news">News</a>
+                        <a href="#news">Market</a>
                     </li>
                     <li>
-                        <a href="#about">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#news">News</a>
-                    </li>
-                    <li>
-                        <a href="#news">News</a>
+                        <a href="#news">Contacts</a>
                     </li>
                 </ul>
 
