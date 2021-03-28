@@ -1,0 +1,50 @@
+.about {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+    padding: 80px 20px;
+}
+
+.title{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: cadetblue;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 0 20px; */
+}
+.title > h2{
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.article {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: chocolate;
+}
+
+.article > div{
+    display: block;
+}
+
+.article h2{
+    color: green;
+    font-weight: normal;
+    font-size: 2rem;
+}
+.article p{
+    font-size: 1.2rem;
+}
