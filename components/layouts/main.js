@@ -8,6 +8,7 @@ import Footer from '../Footer'
 const name = "ED"
 export const siteTitle = "Sample Website"
 
+
 export default function MainLayout({ children }) {
     return (
         <>
@@ -25,6 +26,8 @@ export default function MainLayout({ children }) {
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                
                 <title>{siteTitle}</title>  
             </Head>
             <Header />

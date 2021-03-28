@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import {useEffect} from 'react'
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 
@@ -10,11 +11,21 @@ import Link from 'next/link';
 // components
 import News from '../components/News'
 
-
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y]);
 
 export default function Home() {
+  useEffect(()=>{
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  },[])
   return (
     <div className={styles.container}>
       <Head>
