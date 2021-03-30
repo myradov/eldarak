@@ -15,36 +15,46 @@ import News from '../components/News'
 SwiperCore.use([Navigation, Pagination, A11y]);
 
 export default function Home() {
-  const [shadow, setShadow] = useState(null)
-  useEffect(()=>{
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  },[]);
+  const [transform, setTransform] = useState(null)
+  useEffect(() => {
+      document.addEventListener('mousemove', (e) => {
+          let x = e.clientX - (document.documentElement.clientWidth * 1.5);
+          let y = e.clientY - (document.documentElement.clientHeight * 1.5);
+          setTransform('translate(' + x + 'px, ' + y + 'px)')
+          console.log(Math.floor(x))
+      })
+      // console.log(document.documentElement.clientHeight)
+  },[])
 
-  const useMousePosition = () => {
-    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-  
-    const updateMousePosition = e => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-  
-    useEffect(() => {
-      window.addEventListener("mousemove", updateMousePosition);
-  
-      return () => window.removeEventListener("mousemove", updateMousePosition);
-    }, []);
-  
-    return mousePosition;
-  };
+  // useEffect(()=>{
+  //   if (window.netlifyIdentity) {
+  //     window.netlifyIdentity.on("init", user => {
+  //       if (!user) {
+  //         window.netlifyIdentity.on("login", () => {
+  //           document.location.href = "/admin/";
+  //         });
+  //       }
+  //     });
+  //   }
+  // },[]);
 
-  const { x, y } = useMousePosition();
+  // const useMousePosition = () => {
+  //   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+  
+  //   const updateMousePosition = e => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
+  
+  //   useEffect(() => {
+  //     window.addEventListener("mousemove", updateMousePosition);
+  
+  //     return () => window.removeEventListener("mousemove", updateMousePosition);
+  //   }, []);
+  
+  //   return mousePosition;
+  // };
+
+  // const { x, y } = useMousePosition();
 
   return (
     <div className={styles.container}>
@@ -54,14 +64,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.bgWrap}>
-        {`Your cursor is at ${x}, ${y}.`}
+        
+        {/* {`Your cursor is at ${x}, ${y}.`} */}
         <Image
-          alt="Mountains"
+          alt="Carpet"
           src="/bg.jpg"
           layout="fill"
           objectFit="cover"
           quality={100}
         />
+        <div className={styles.shadow} style={{transform}}></div>
         
         <div className={styles.bgLogo}>
           <Image 

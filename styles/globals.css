@@ -21,13 +21,13 @@ a {
 
 /* Swiper */
 .swiper-container{
-  background-color: chocolate;
+  /* background-color: chocolate; */
   display: block;
   --swiper-navigation-size: 32px !important;
 }
 
 .swiper-wrapper{
-  background-color: cyan;
+  background-color: white;
   position: relative;
   display: flex;
   /* justify-content: center; */
@@ -37,7 +37,7 @@ a {
 
 .swiper-slide{
   display: block;
-  background-color: violet;
+  /* background-color: violet; */
 }
 .swiper-slide > div:first-child{
   display: block !important;
@@ -53,7 +53,7 @@ a {
 
 
 .swiper-pagination-bullet{
-  background-color: yellowgreen !important;
+  background-color: rgb(237, 237, 237) !important;
   width: 10px !important;
   height: 10px !important;
 }
