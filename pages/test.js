@@ -3,9 +3,6 @@ import Mouse from '../components/Mouse'
 import News from '../components/News'
 
 
-import useMousePosition from '../libs/useMousePosition'
-
-
 export default function Test(){
     // const [image, setImage] = useState(null)
     // const { x, y } = useMousePosition();
@@ -21,13 +18,6 @@ export default function Test(){
 
         <section>
           <News/>
-          <News/>
-          <News/>
-          <News/>
-          <News/>
-          <News/>
-          <News/>
-
         </section>
 
 

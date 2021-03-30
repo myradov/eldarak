@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react/cjs/react.development'
-import useMousePosition from '../libs/useMousePosition'
+// import useMousePosition from '../libs/useMousePosition'
 import styles from '../styles/About.module.css'
 
 export default function Mouse(){
     // const { x, y } = useMousePosition()
     const [transform, setTransform] = useState(null)
-    const [image, setImage] = useState(null)
     useEffect(() => {
         document.addEventListener('mousemove', (e) => {
             let x = e.clientX - (document.documentElement.clientWidth * 1.5);
