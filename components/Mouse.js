@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react/cjs/react.development'
+import { useEffect, useState } from 'react'
 // import useMousePosition from '../libs/useMousePosition'
 import styles from '../styles/About.module.css'
 
@@ -11,7 +11,7 @@ export default function Mouse(){
             let x = e.clientX - (document.documentElement.clientWidth * 1.5);
             let y = e.clientY - (document.documentElement.clientHeight * 1.5);
             setTransform('translate(' + x + 'px, ' + y + 'px)')
-            console.log(Math.floor(x))
+            // console.log(Math.floor(x))
         })
         // console.log(document.documentElement.clientHeight)
     },[])
