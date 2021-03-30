@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
 
@@ -15,6 +15,7 @@ import News from '../components/News'
 SwiperCore.use([Navigation, Pagination, A11y]);
 
 export default function Home() {
+  const [shadow, setShadow] = useState(null)
   useEffect(()=>{
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
@@ -25,7 +26,26 @@ export default function Home() {
         }
       });
     }
-  },[])
+  },[]);
+
+  const useMousePosition = () => {
+    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+  
+    const updateMousePosition = e => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+  
+    useEffect(() => {
+      window.addEventListener("mousemove", updateMousePosition);
+  
+      return () => window.removeEventListener("mousemove", updateMousePosition);
+    }, []);
+  
+    return mousePosition;
+  };
+
+  const { x, y } = useMousePosition();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,6 +54,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.bgWrap}>
+        {`Your cursor is at ${x}, ${y}.`}
         <Image
           alt="Mountains"
           src="/bg.jpg"
@@ -41,10 +62,11 @@ export default function Home() {
           objectFit="cover"
           quality={100}
         />
+        
         <div className={styles.bgLogo}>
           <Image 
             alt="ED logo"
-            src="/ellogo3.svg"
+            src="/ellogo1.svg"
             width={150}
             height={150}
           />
@@ -147,7 +169,6 @@ export default function Home() {
       <section className={styles.sections}>
         <News />
       </section>
-     
     </div>
   )
 }
