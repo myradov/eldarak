@@ -27,12 +27,6 @@ export default function Mouse(){
             />
             <div className={styles.shadow} style={{transform}}></div>
         </section>
-
-        <section>
-            {image}
-        </section>
-           
-
         </>
     )
 }
