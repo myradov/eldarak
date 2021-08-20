@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 // import useMousePosition from '../libs/useMousePosition'
-import styles from '../styles/About.module.css'
+// import styles from '../styles/About.module.css'
 
 export default function Mouse(){
     // const { x, y } = useMousePosition()
