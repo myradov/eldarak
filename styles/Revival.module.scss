@@ -1,0 +1,41 @@
+$black : #000000;
+// $lightblack: #0A0A0A;
+$lightblack: #111111;
+$gray: #202124;
+$darkgray : #292929;
+
+// $gray : #333333;
+$lightgray: #A0AAB2;
+$lightgray: #40484F;
+$text-black: #1D1D1D;
+$text-gray: #a9a9a9;
+
+.revival {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #1D1D1D;
+    padding: 0 5em;
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    .grid{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // background-color: #000000;
+
+        .article{
+            position: relative;
+            flex: 200px;
+            // background-color:yellowgreen;
+            margin: 5px;
+        }
+    }
+}
+

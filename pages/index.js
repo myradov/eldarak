@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import Image from 'next/image'
 import {useEffect, useState} from 'react'
 // import Swiper core and required modules
@@ -21,41 +21,16 @@ export default function Home() {
           let x = e.clientX - (document.documentElement.clientWidth * 1.5);
           let y = e.clientY - (document.documentElement.clientHeight * 1.5);
           setTransform('translate(' + x + 'px, ' + y + 'px)')
-          console.log(Math.floor(x))
-      })
+          // console.log(Math.floor(x))
+      });
+      document.addEventListener('touchmove', (e) => {
+        let x = e.touches[0].clientX - (document.documentElement.clientWidth * 1.5);
+        let y = e.touches[0].clientY - (document.documentElement.clientHeight * 1.5);
+        setTransform('translate(' + x + 'px, ' + y + 'px)')
+        // console.log(x)
+    })
       // console.log(document.documentElement.clientHeight)
   },[])
-
-  // useEffect(()=>{
-  //   if (window.netlifyIdentity) {
-  //     window.netlifyIdentity.on("init", user => {
-  //       if (!user) {
-  //         window.netlifyIdentity.on("login", () => {
-  //           document.location.href = "/admin/";
-  //         });
-  //       }
-  //     });
-  //   }
-  // },[]);
-
-  // const useMousePosition = () => {
-  //   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-  
-  //   const updateMousePosition = e => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //   };
-  
-  //   useEffect(() => {
-  //     window.addEventListener("mousemove", updateMousePosition);
-  
-  //     return () => window.removeEventListener("mousemove", updateMousePosition);
-  //   }, []);
-  
-  //   return mousePosition;
-  // };
-
-  // const { x, y } = useMousePosition();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -85,11 +60,34 @@ export default function Home() {
           {/* <img src="vercel.svg" alt="logo"/> */}
         </div>
       </main>
-      <section className={styles.card}>
-        <h1 className={styles.title}>Articles</h1>  
-      </section>      
-
-      <main className={styles.slider}>
+      
+     
+      <section className={styles.about}>
+        <section className={styles.headline}>
+          <p className={styles.excerpt}>about eldarak</p>
+          <h3>About Us</h3>
+          <p className={styles.subtitle}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut enim atque itaque, consectetur et dolore animi ipsam minima ipsum non corporis placeat doloremque autem delectus iusto soluta temporibus fugit culpa.</p>
+        </section> 
+        <div className={styles.aboutCard}>
+          <div>
+            <img src="slider.jpg" alt="" width="500"/>
+          </div>
+          <div>
+            <h2>What we do?</h2>
+            <p>
+            Turkmen carpet. What is it? Someone says that it is a magnificent subject of an interior, someone asserts that it is the Universe map, the thirds see history of creation of Life in a carpet. This unique product born in the heart of millennia is still an enigma and remains a focal point of endless discussions and discoveries.
+              </p>
+          </div>
+        </div>
+        <Link href="/about"><a className={styles.aboutBtn}>Read more</a></Link>
+      </section> 
+      
+      <main className={styles.revival} id="revival">
+        <section className={styles.headline}>
+          <p className={styles.excerpt}>revival</p>
+          <h3>Revival</h3>
+          <p className={styles.subtitle}>Collecting nuances and old craftsmen’s secrets by crumbs, we revive Turkmen carpets in accordance with the forgotten ancient technologies. They are the carpets, with the energetics going back into millennia.</p>
+        </section> 
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -109,7 +107,7 @@ export default function Home() {
               height={685}
             />
             <div className={styles.slideTitle}>
-              <h2 className={styles.description}>возраждение старинных технологии</h2>
+              <h2 className={styles.description}>Revival of the ancient traditions</h2>
               <Link href="#">
                 <a>READ</a>
               </Link>
@@ -128,7 +126,7 @@ export default function Home() {
               height={685}
             />
             <div className={styles.slideTitle}>
-              <h2 className={styles.description}>возраждение старинных технологии</h2>
+              <h2 className={styles.description}>Traditional turkmen carpets</h2>
               <Link href="#">
                 <a>READ</a>
               </Link>
@@ -146,7 +144,7 @@ export default function Home() {
               height={685}
             />
             <div className={styles.slideTitle}>
-              <h2 className={styles.description}>возраждение старинных технологии</h2>
+              <h2 className={styles.description}>Revival of the traditional turkmen carpets</h2>
               <Link href="#">
                 <a>READ</a>
               </Link>
@@ -164,7 +162,7 @@ export default function Home() {
               height={685}
             />
             <div className={styles.slideTitle}>
-              <h2 className={styles.description}>возраждение старинных технологии</h2>
+              <h2 className={styles.description}>Revival of the ancient traditions</h2>
               <Link href="#">
                 <a>READ</a>
               </Link>
@@ -175,10 +173,13 @@ export default function Home() {
           {/* <SwiperSlide><img src="bg.jpg" alt="" width={400}/></SwiperSlide> */}
         </Swiper>
       </main>
-      <section className={styles.card}>
-        <h1 className={styles.title}>News</h1>  
-      </section>   
-      <section className={styles.sections}>
+       
+      <section className={styles.news}>
+        <section className={styles.headline}>
+          <p className={styles.excerpt}>latest news</p>
+          <h3>News</h3>
+          <p className={styles.subtitle}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut enim atque itaque, consectetur et dolore animi ipsam minima ipsum non corporis placeat doloremque autem delectus iusto soluta temporibus fugit culpa.</p>
+        </section>  
         <News />
       </section>
     </div>

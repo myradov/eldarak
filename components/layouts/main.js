@@ -3,7 +3,8 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 import Header from '../Header'
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
+
 
 const name = "ED"
 export const siteTitle = "Sample Website"
@@ -16,7 +17,7 @@ export default function MainLayout({ children }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="Eldarak"
                 />
                 <meta
                     property="og:image"
@@ -26,8 +27,9 @@ export default function MainLayout({ children }) {
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <script src="https://identity.netlify.com/v1/netlify-identity.js"></script>
-                
+
+                <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap" rel="stylesheet"/>
                 <title>{siteTitle}</title>  
             </Head>
             <Header />

@@ -1,0 +1,26 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgb(165, 142, 185);
+    padding: 10em 0;
+}
+.news{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    // align-content: space-between;
+    // flex-basis: 33%;
+}
+
+.revival{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: cadetblue;
+}

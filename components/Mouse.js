@@ -11,7 +11,15 @@ export default function Mouse(){
             let x = e.clientX - (document.documentElement.clientWidth * 1.5);
             let y = e.clientY - (document.documentElement.clientHeight * 1.5);
             setTransform('translate(' + x + 'px, ' + y + 'px)')
+            // setTransform(`translate(' ${x} px, ${y} px')`)
             // console.log(Math.floor(x))
+            // setTransform()
+        })
+        document.addEventListener('touchmove', (e) => {
+            let x = e.touches[0].clientX - (document.documentElement.clientWidth * 1.5);
+            let y = e.touches[0].clientY - (document.documentElement.clientHeight * 1.5);
+            setTransform('translate(' + x + 'px, ' + y + 'px)')
+            // console.log(Math.floor(`Touchmove: ${x}`))
         })
         // console.log(document.documentElement.clientHeight)
     },[])
