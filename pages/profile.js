@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles/Profile.module.scss'
 // import NewsCard from '../components/NewsCard/NewsCard'
-import RevivalCard from '../components/RevivalCard/RevivalCard'
+// import RevivalCard from '../components/RevivalCard/RevivalCard'
 
 const Profile = () => {
     return (
@@ -16,8 +16,8 @@ const Profile = () => {
             {/* <NewsCard /> */}
         </div>
         <div className={styles.revival}>
-            <RevivalCard />
-            <RevivalCard />
+            {/* <RevivalCard /> */}
+            {/* <RevivalCard /> */}
         </div>
            
         </div>

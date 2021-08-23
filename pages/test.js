@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 // import Mouse from '../components/Mouse'
-import News from '../components/News'
+import News from '../components/News.js'
 // import styles from '../styles/About.module.scss'
 
 
