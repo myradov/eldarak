@@ -1,0 +1,47 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    flex: 35%;
+    margin: 10px;
+    // background-color: rgb(144, 0, 255);
+
+    .cardImg{
+        display: block;
+    }
+
+    .cardTxt{
+        position: relative;
+        display: block;
+        width: 60%;
+        color: white;
+        margin: 1em 0;
+        
+        h2{
+            margin: .5em 0;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Gentium Book Basic', serif;
+        }
+        p{
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+    }
+}
+.card:nth-child(even){
+    position: relative;
+    flex: 35%;
+    margin-top: 300px;
+    // background-color: aliceblue;
+}
+// .card:nth-child(odd){
+//     // margin-top: -120px;
+//     // background-color: aquamarine;
+// }
+
+// .card:first-child{
+//     // margin-top: -10px;
+// }

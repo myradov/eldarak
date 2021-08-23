@@ -92,9 +92,12 @@ $text-gray: #a9a9a9;
     font-size: 1.3rem;
     line-height: 1.5;
     margin-bottom: .5em;
-    text-indent: 50px;
+    // text-indent: 50px;
     color: $text-gray;
     letter-spacing: 0.5px;
+    column-count: 2;
+    column-gap: 50px;
+    column-rule: 1px solid #40484F;
 }
 
 .bgShadow{

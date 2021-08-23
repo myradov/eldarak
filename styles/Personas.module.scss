@@ -1,0 +1,21 @@
+.personas{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    // background-color: plum;
+    padding: 2em 3em;
+
+    .cards{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        // background-color: royalblue
+    }
+}

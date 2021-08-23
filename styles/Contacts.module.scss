@@ -1,0 +1,75 @@
+.contacts{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    // background-color:gray;
+    padding: 2em 3em;
+    overflow: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .container{
+        position: relative;
+        display: block;
+        padding: 2em 3em;
+        width: 60%;
+        min-height: 700px;
+        height: auto;
+        background-color: black;
+        color: white;
+        z-index: 0;
+
+        .text{
+            position: relative;
+            display: block;
+            padding-right: 2em;
+            max-width: 80%;
+            .title{
+                position: relative;
+                display: block;
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: 'Gentium Book Basic', serif;
+                margin: 1em 0;
+                
+            }
+            .subtitle{
+                position: relative;
+                display: block;
+                font-size: 1.25rem;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                width: 60%;
+            }
+        }
+
+        .grid{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 1em;
+            width: 50%;
+            div{
+                margin: 10px;
+                h4{
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    margin-bottom: .5em;
+                }
+            }
+        }
+    }
+    .contactImg{
+        position: absolute;
+        // top: 0;
+        right: 0;
+        z-index: 0;
+        width: 60%;
+    }
+}

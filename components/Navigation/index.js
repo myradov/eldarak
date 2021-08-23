@@ -55,7 +55,7 @@ export default function Navigation(){
                         </Link>
                     </li>
                     <li>
-                        <Link href="/persona">
+                        <Link href="/personas">
                             <a>Persona</a>
                         </Link>
                     </li>
