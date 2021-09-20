@@ -1,21 +1,27 @@
 .card{
     position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // flex-direction: column;
+    justify-content: flex-start;
     align-items:center;
-    flex: 35%;
+    flex: 50%;
     margin: 10px;
-    // background-color: rgb(144, 0, 255);
+    margin-bottom: 50px;
+    max-width: 605px;
+    min-width: 400px;
+    background-color: rgb(144, 0, 255);
 
     .cardImg{
         display: block;
+        margin-right: 1em;
+        width: 60%;
+        height: 400px;
     }
 
     .cardTxt{
         position: relative;
         display: block;
-        width: 60%;
+        width: 40%;
         color: white;
         margin: 1em 0;
         
@@ -31,12 +37,12 @@
         }
     }
 }
-.card:nth-child(even){
-    position: relative;
-    flex: 35%;
-    margin-top: 300px;
-    // background-color: aliceblue;
-}
+// .card:nth-child(even){
+//     position: relative;
+//     flex: 35%;
+//     margin-top: 300px;
+//     // background-color: aliceblue;
+// }
 // .card:nth-child(odd){
 //     // margin-top: -120px;
 //     // background-color: aquamarine;

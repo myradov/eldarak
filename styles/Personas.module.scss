@@ -3,18 +3,18 @@
     display: block;
     width: 100%;
     height: auto;
-    // background-color: plum;
+    // background-color: white;
     padding: 2em 3em;
 
     .cards{
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         width: 100%;
         height: auto;
-        max-width: 1200px;
+        max-width: 1250px;
         margin: 0 auto;
         // background-color: royalblue
     }

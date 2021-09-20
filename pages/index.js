@@ -14,7 +14,9 @@ import News from '../components/News'
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, A11y]);
 
-export default function Home() {
+export default function Home({content}) {
+  // console.log(content)
+
   const [transform, setTransform] = useState(null)
   useEffect(() => {
       document.addEventListener('mousemove', (e) => {
@@ -39,8 +41,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.bgWrap}>
-        
-        {/* {`Your cursor is at ${x}, ${y}.`} */}
         <Image
           alt="Carpet"
           src="/bg.jpg"
@@ -49,7 +49,7 @@ export default function Home() {
           quality={100}
         />
         <div className={styles.shadow} style={{transform}}></div>
-        
+{/*         
         <div className={styles.bgLogo}>
           <Image 
             alt="ED logo"
@@ -57,10 +57,8 @@ export default function Home() {
             width={150}
             height={150}
           />
-          {/* <img src="vercel.svg" alt="logo"/> */}
-        </div>
+        </div> */}
       </main>
-      
      
       <section className={styles.about}>
         <section className={styles.headline}>
@@ -173,15 +171,25 @@ export default function Home() {
           {/* <SwiperSlide><img src="bg.jpg" alt="" width={400}/></SwiperSlide> */}
         </Swiper>
       </main>
-       
-      <section className={styles.news}>
-        <section className={styles.headline}>
-          <p className={styles.excerpt}>latest news</p>
-          <h3>News</h3>
-          <p className={styles.subtitle}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut enim atque itaque, consectetur et dolore animi ipsam minima ipsum non corporis placeat doloremque autem delectus iusto soluta temporibus fugit culpa.</p>
-        </section>  
-        <News />
-      </section>
     </div>
   )
+}
+
+
+export async function getStaticProps(){
+  const res = await fetch('http://localhost:8055/items/pages?fields=*.*.*&filter[title][_in]=Home,About')
+  const content = await res.json();
+
+
+  if(!content){
+    return{
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      content
+    },
+  }
 }

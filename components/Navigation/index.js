@@ -1,20 +1,24 @@
 import Link from 'next/link'
 import styles from './Navigation.module.scss'
 import {useState, useEffect} from 'react'
+import {useRouter} from 'next/router'
 
-export default function Navigation(){
-    // const [menubg, setMenubg] = useState(styles.bgi)
+
+
+
+const Navigation = () => {
+
+    const router = useRouter()
+    const { locale } = router
+    console.log(locale)
+
     const prevScrollpos = 'window.pageYOffset';
     const [prev, setPrev] = useState(prevScrollpos)
     const handleScroll = (e) => {
-        // console.log(`prev ${prevScrollpos}`)
         const currentScrollPos = window.pageYOffset;
-        // console.log(`current ${currentScrollPos}`)
         if (prev > currentScrollPos) {
-            // console.log('30+')
             document.getElementById("nav").style.top = "0";
         } else {
-            // console.log('30-')
             document.getElementById("nav").style.top = "-80px";
         }
         setPrev(currentScrollPos)
@@ -50,11 +54,6 @@ export default function Navigation(){
                         </Link>
                     </li>
                     <li>
-                        <Link href="/news">
-                            <a>News</a>
-                        </Link>
-                    </li>
-                    <li>
                         <Link href="/personas">
                             <a>Persona</a>
                         </Link>
@@ -73,18 +72,39 @@ export default function Navigation(){
 
                 <div className={styles.lang}>
                     <div>
-                        <Link href="/en">
-                            <a>EN</a>
-                        </Link>
-                        <Link href="/tm">
-                            <a>TM</a>
-                        </Link>
-                        <Link href="/ru">
-                            <a>RU</a>
-                        </Link>
+                    {
+                        router.locales.map((locale) => (
+                        <li key={locale}>
+                            <Link href={router.asPath} locale={locale}><a>{locale}</a></Link>
+                            {/* <Link href={`http://localhost:8055/items/pages?fields=translations.*&deep[translations][_filter][languages_code][_eq]=ru-RU`} locale={locale}><a>{locale}</a></Link> */}
+                        </li>
+                        ))
+                    }
                     </div>
                 </div>
             </div>
         </nav>
     )
 }
+
+
+// export async function getStaticProps(){
+
+//     const res = await fetch('http://localhost:8055/items/pages?fields=title,translations.title')
+//     const navlinks = await res.json()
+
+
+//     if(!navlinks){
+//         return { 
+//           notFound: true
+//         }
+//     }
+
+//     return {
+//         props: {
+//             navlinks
+//         }
+//     }
+// }
+
+export default Navigation;
