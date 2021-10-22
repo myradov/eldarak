@@ -36,6 +36,7 @@ a {
   /* justify-content: center; */
   align-items: center !important;
   box-sizing: border-box;
+  padding: 1em;
 }
 
 .swiper-slide{
@@ -51,8 +52,9 @@ a {
   background-color: rgb(240, 240, 240);
   padding: 2em;
   border-radius: 50%;
-  width: 100px;
+  width: 30px !important;
   color: black !important;
+  visibility: hidden;
 }
 
 
@@ -73,3 +75,9 @@ img{
 /* .swiper-button-next{
   background-color: brown;
 } */
+
+@media (min-width: 990px) {
+  .swiper-button-prev, .swiper-button-next{
+    visibility: visible;
+  }
+}

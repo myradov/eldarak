@@ -27,7 +27,7 @@ const Revival = ({item}) => {
                    
                     <div className={styles.textContent}>
                         <h2 className={styles.title}>{t.title}</h2>
-                        <div>{t.content}</div>
+                        <div dangerouslySetInnerHTML={{__html: t.content}}></div>
                     </div>
                     
                 </article>

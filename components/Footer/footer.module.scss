@@ -1,15 +1,18 @@
 .footer{
     position: relative;
     width: 100%;
+    height: auto;
     margin: auto;
     background-color: #000000;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 1em 3em;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    overflow: hidden;
     .sections{
         position: relative;
         // background-color: #0A0A0A;
@@ -31,13 +34,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
+
             li{
                 list-style-type:none;
                 margin-right: 1em;
             }
             li.menulist{
                 color: white;
+                white-space: nowrap;
                 // background-color: yellowgreen;
             }
             li.sociallist{

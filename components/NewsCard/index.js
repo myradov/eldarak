@@ -1,29 +1,36 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './NewsCard.module.scss'
+import { useRouter } from 'next/router'
 
 
 
-const NewsCard = () => {
+const NewsCard = ({post}) => {
+    const router = useRouter()
+    const { locale } = router
+
+    const t = locale === 'en' ? post.translations[0] : locale === 'ru' ? post.translations[1] : locale === 'tm' ? post.translations[2] : ''
+
+    // console.log(t)
+    console.log(`hello post ${post.translations[0].title}`)
+    console.log(`hello t ${t.id}`)
+
     return (
         <>
-            <Link href="/profile">
+            <Link href={`/news/${post.id}`} locale={false}>
                 <a className={styles.card}>
                     {/* <div className={styles.card}> */}
                         <div className={styles.cardTitle}>
                             <h3 className={styles.title}>
-                                Title
+                                {t.title}
                             </h3>
-                            <p className={styles.description}>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium repellendus deserunt cumque, obcaecati molestias ex a.
-                            </p>
+                            <h3 className={styles.description}>{t.slug}</h3>
                         </div>
+                        
                     {/* </div> */}
                 </a>
             </Link>
-        {/* <div className={styles.flex}> */}
-           
-        {/* </div> */}
+       
             
         </>
     )

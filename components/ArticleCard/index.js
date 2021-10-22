@@ -16,7 +16,7 @@ const ArticleCard = ({article}) => {
                     <Image src={`http://localhost:8055/assets/${article.banner}`} className={styles.image} width={1000} height={680}/>
                 </div>
                 <div className={styles.cardTxt}>
-                    <Link href="/articles">
+                    <Link href={`/articles/${article.id}`}>
                         <a>
                             {/* <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2> */}
                             <h2>{t.title}</h2>

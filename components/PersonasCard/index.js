@@ -12,18 +12,23 @@ const index = ({persona}) => {
     const t = locale === 'en' ? persona.translations[0] : locale === 'ru' ? persona.translations[1] : locale === 'tm' ? persona.translations[2]: ''
     return (
         <>
-            <article className={styles.card}>
-                <div className={styles.cardImg}>
-                    <Image src={`http://localhost:8055/assets/${persona.banner}`} width={350} height={400}/>
-                </div>
-                <div className={styles.cardTxt}>
-                    <Link href="/personas">
-                        <a>
-                            <h2>{t.title}</h2>
-                        </a>
-                    </Link>
-                    <p>{t.description}</p>
-                </div>
+            <article className={styles.persona}>
+                <Link href={`/personas/${persona.id}`}>
+                    <a className={styles.card}>
+                        <div className={styles.cardImg}>
+                            <Image src={`http://localhost:8055/assets/${persona.banner}`} width={350} height={400}/>
+                        </div>
+                        <div className={styles.cardTxt}>
+                            <Link href={`/personas/${persona.id}`}>
+                                <a>
+                                    <h2>{t.title}</h2>
+                                </a>
+                            </Link>
+                            <p>{t.description}</p>
+                        </div>
+                    </a>
+                </Link>
+                
             </article>
         </>
     )

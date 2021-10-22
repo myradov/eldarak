@@ -1,8 +1,9 @@
 .news{
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+    height: 400px;
     background-color: initial;
     color: white;
 }
