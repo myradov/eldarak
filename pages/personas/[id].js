@@ -12,7 +12,7 @@ const Persona = ({personas}) => {
     const router = useRouter()
     const { locale } = router
 
-    console.log(router)
+    // console.log(router)
 
     const t = locale === 'en' ? personas.data.translations[0] : locale === 'ru' ? personas.data.translations[1] : locale === 'tm' ? personas.data.translations[2] : ''
     
@@ -20,7 +20,7 @@ const Persona = ({personas}) => {
         <>
             <article className={styles.persona}>
                 <div className={styles.personaImg}>
-                    <Image src={`http://localhost:8055/assets/${personas.data.banner}`} width={450} height={500}/>
+                    <Image src={`http://localhost:8055/assets/${personas.data.banner}`} width={3649} height={5473} />
                 </div>
                 <aside className={styles.personaBody}>
                     <h2 className={styles.personaTitle}>{t.title}</h2>

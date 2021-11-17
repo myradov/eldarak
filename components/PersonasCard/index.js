@@ -16,7 +16,7 @@ const index = ({persona}) => {
                 <Link href={`/personas/${persona.id}`}>
                     <a className={styles.card}>
                         <div className={styles.cardImg}>
-                            <Image src={`http://localhost:8055/assets/${persona.banner}`} width={350} height={400}/>
+                            <Image src={`http://localhost:8055/assets/${persona.banner}`} width={3649} height={5473}/>
                         </div>
                         <div className={styles.cardTxt}>
                             <Link href={`/personas/${persona.id}`}>

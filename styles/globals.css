@@ -25,8 +25,9 @@ a {
 .swiper-container{
   /* background-color: chocolate; */
   display: block;
+  width: 90%;
   --swiper-navigation-size: 32px !important;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 
 .swiper-wrapper{
@@ -36,7 +37,8 @@ a {
   /* justify-content: center; */
   align-items: center !important;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 0;
+  margin-bottom: .5em;
 }
 
 .swiper-slide{
@@ -50,12 +52,16 @@ a {
 .swiper-button-prev, .swiper-button-next{
   background-color: rgba(232, 228, 228, 0.2);
   background-color: rgb(240, 240, 240);
-  padding: 2em;
-  border-radius: 50%;
+  padding: 1.6em;
+  border-radius: none;
   width: 30px !important;
   color: black !important;
   visibility: hidden;
 }
+
+/* .swiper-button-prev{
+  left: 18px !important;
+} */
 
 
 .swiper-pagination-bullet{

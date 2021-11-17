@@ -13,7 +13,7 @@ const ArticleCard = ({article}) => {
         <>
             <article className={styles.article}>
                 <div className={styles.cardImg}>
-                    <Image src={`http://localhost:8055/assets/${article.banner}`} className={styles.image} width={1000} height={680}/>
+                    <Image src={`http://localhost:8055/assets/${article.banner}`} className={styles.image} width={4032} height={2128}/>
                 </div>
                 <div className={styles.cardTxt}>
                     <Link href={`/articles/${article.id}`}>

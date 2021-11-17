@@ -10,14 +10,12 @@
     justify-content: center;
     align-items: center;
     padding: 1em 3em;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    // border-top-left-radius: 30px;
+    // border-top-right-radius: 30px;
     overflow: hidden;
     .sections{
         position: relative;
-        // background-color: #0A0A0A;
         margin: 1em;
-        // flex-basis: 33.3%;
         flex-grow: 1;
         .logo{
             width: 100%;
@@ -35,10 +33,12 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            gap: 14px;
 
             li{
                 list-style-type:none;
-                margin-right: 1em;
+                // margin-right: 1em;
+                // gap: 10px;
             }
             li.menulist{
                 color: white;

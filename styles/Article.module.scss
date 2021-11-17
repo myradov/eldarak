@@ -3,15 +3,27 @@
     width: 100%;
     height: auto;
     background-color: inherit;
-    padding: .3em 0 0;
+    padding: 70px 0 100px;
     max-width: 1440px;
     margin: 0 auto;
     // margin-top: .5em;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
+    .articleTitle{
+        position: relative;
+        display: block;
+        font-family: 'Gentium Book Basic', serif;
+        font-size: 3rem;
+        // margin: 1em auto;
+        font-weight: normal;
+        color: white;
+        margin: .7em 0;
+    }
 }
 
 .article{
@@ -23,14 +35,14 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    padding: 1em 0;
+    padding-bottom: 1em;
 
     .articleTitle{
         position: relative;
         display: block;
         font-family: 'Gentium Book Basic', serif;
         font-size: 2rem;
-        margin: .5em auto;
+        margin: 1em auto;
         font-weight: bold;
         width: 80%;
         text-align: center;
@@ -38,7 +50,9 @@
     
     .articleImg{
         position: relative;
-        // display: block;
+        display: block;
+        width: 100%;
+        height: 60vh;
 
     }
 
@@ -46,54 +60,60 @@
         position: relative;
         display: block;
         width: 90%;
-        margin: 1em auto;
+        margin: 0 auto;
         p{
             font-size: 1.1rem;
             font-family: 'Lato', 'Roboto', sans-serif;
-            line-height: 1.3;
+            line-height: 1.5;
             letter-spacing: .3px;
-        }
-    }
-}
 
-@media (min-width: 768px) {
-    .articles{
-        align-items: flex-start;
-        justify-content: space-evenly;
-    }
-    .article{
-        color: #fff;
-    
-        .articleTitle{
-            font-size: 2.5rem;
-            margin: .5em auto;
-        }
-        .articleImg{
-            position: relative;
-            // display: block;
-        }
-        .articleContent{
-            width: 80%;
-            margin: 1em auto;
-            p{
-                font-size: 1.2rem;
-                font-family: 'Lato', 'Roboto', sans-serif;
-                line-height: 1.3;
-                letter-spacing: .3px;
+            img{
+                position: relative;
+                display: block;
+                width: 90%;
+                height: auto;
+                margin: .5em auto;
             }
         }
     }
-    
-
-
 }
+
+// @media (min-width: 768px) {
+//     .articles{
+//         align-items: flex-start;
+//         justify-content: space-evenly;
+//     }
+//     .article{
+//         color: #fff;
+    
+//         .articleTitle{
+//             font-size: 2.5rem;
+//             margin: .5em auto;
+//         }
+//         .articleImg{
+//             position: relative;
+//             // display: block;
+//         }
+//         .articleContent{
+//             width: 80%;
+//             margin: 1em auto;
+//             p{
+//                 font-size: 1.2rem;
+//                 font-family: 'Lato', 'Roboto', sans-serif;
+//                 line-height: 1.3;
+//                 letter-spacing: .3px;
+//             }
+//         }
+//     }
+// }
 
 @media (min-width: 990px) {
     .articles{
-        padding: 2em 0;
+        padding: 70px 0;
         max-width: 1440px;
         margin: 0 auto;
     }
+    // Article open
     .article{
         position: relative;
         width: 100%;
@@ -103,29 +123,33 @@
         justify-content: center;
         align-items: center;
         color: #fff;
+        
     
         .articleTitle{
             position: relative;
             display: block;
             font-family: 'Gentium Book Basic', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 1em auto;
-            font-weight: bold;
+            font-weight: normal;
         }
         
         .articleImg{
             position: relative;
+            display: block;
+            width: 100%;
+            height: 100vh;
         }
     
         .articleContent{
             position: relative;
             display: block;
-            width: 70%;
-            margin: 1em auto;
+            width: 50%;
+            margin: 0em auto;
             p{
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 font-family: 'Lato', 'Roboto', sans-serif;
-                line-height: 1.3;
+                line-height: 1.5;
                 letter-spacing: .3px;
             }
         }

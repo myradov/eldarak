@@ -1,7 +1,14 @@
 import styles from './footer.module.scss'
 import Link from 'next/link'
+import useSWR from 'swr'
+import {useRouter} from 'next/router'
 
 export default function Footer(){
+    const fetcher = async url => await fetch(url).then(r => r.json())
+    const { data: menulist } = useSWR('http://localhost:8055/items/menu?fields=id,title,translations.*', fetcher)
+
+    const router = useRouter()
+    const { locale } = router
     return (
         <footer className={styles.footer}>
           <div className={styles.sections}>
@@ -13,15 +20,18 @@ export default function Footer(){
           </div>
           <div className={styles.sections}>
             <ul className={styles.list}>
-              <li className={styles.menulist}>
-                <Link href="/about"><a>About us</a></Link>
-              </li>
-              <li className={styles.menulist}>
-                <Link href="/news"><a>News</a></Link>
-              </li>
-              <li className={styles.menulist}>
-                <Link href="/contacts"><a>Contacts</a></Link>
-              </li>
+            {
+              menulist && 
+              menulist.data.map(item => (
+                  <li key={item.id}>
+                      <Link href={`/${item.title}`}>
+                          <a>{
+                          locale === 'en' ? item.translations[0].title : locale === 'ru' ? item.translations[1].title : locale === 'tm' ? item.translations[2].title : ''
+                          }</a>
+                      </Link>
+                  </li>
+              ))
+            }
             </ul>
           </div>
           <div className={styles.sections}>

@@ -16,10 +16,10 @@ const Article = ({articles}) => {
             } */}
 
             <article className={styles.article}>
-                <h2 className={styles.articleTitle}>{t.title}</h2>
                 <div className={styles.articleImg}>
-                    <Image src={`http://localhost:8055/assets/${articles.data.banner}`} width={4032} height={2128}/>
+                    <Image src={`http://localhost:8055/assets/${articles.data.banner}`} width={4032} height={2128} layout="fill" objectFit="cover" objectPosition="left" />
                 </div>
+                <h2 className={styles.articleTitle}>{t.title}</h2>
                 <div className={styles.articleContent} dangerouslySetInnerHTML={{__html: t.content}}>
                 </div>
 

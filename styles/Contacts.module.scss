@@ -1,48 +1,41 @@
 .contacts{
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     width: 100%;
     height: 100vh;
-    // background-color:gray;
-    padding: 2em 3em;
     overflow: hidden;
     max-width: 1440px;
     margin: 0 auto;
+    background-color: #292222;
 
     .container{
         position: relative;
         display: block;
-        padding: 2em 3em;
-        width: 60%;
-        min-height: 700px;
-        height: auto;
+        padding: 0em 2em;
+        width: 100%;
+        height: 100vh;
         background-color: black;
         color: white;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
 
         .text{
             position: relative;
             display: block;
-            padding-right: 2em;
-            max-width: 80%;
+            max-width: 100%;
             .title{
                 position: relative;
                 display: block;
-                font-size: 3rem;
+                font-size: 2em;
                 font-weight: bold;
                 font-family: 'Gentium Book Basic', serif;
                 margin: 1em 0;
-                
-            }
-            .subtitle{
-                position: relative;
-                display: block;
-                font-size: 1.25rem;
-                line-height: 1.2;
-                letter-spacing: 1px;
-                width: 60%;
+                margin-top: 0;
             }
         }
 
@@ -50,26 +43,295 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
+            gap: 50px;
             margin-top: 1em;
-            width: 50%;
-            div{
-                margin: 10px;
-                h4{
+            width: 100%;
+            .grid_1{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                height: auto;
+                .subtitle{
                     position: relative;
-                    text-transform: uppercase;
+                    display: block;
                     font-size: 1rem;
-                    margin-bottom: .5em;
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                    width: 100%;
+                    margin-bottom: 1em;
                 }
+                div{
+                    margin: 10px;
+                    h4{
+                        position: relative;
+                        text-transform: uppercase;
+                        font-size: .9rem;
+                        margin-bottom: .5em;
+                    }
+                    address{
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .grid_2{
+                position: relative;
+                display: flex;
+                flex-direction: unset;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                width: 100%;
+                height: auto;
+                gap: 10px;
+                .subtitle{
+                    position: relative;
+                    display: block;
+                    font-size: 1rem;
+                    line-height: 1.2;
+                    letter-spacing: 1px;
+                    width: 100%;
+                    margin-bottom: 1em;
+                }
+                div{
+                    margin-right: 10px;
+                    img{
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts{
+        .container{
+            padding: 0em 3em;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+    
+            .text{
+                position: relative;
+                display: block;
+                max-width: 100%;
+                .title{
+                    position: relative;
+                    display: block;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    font-family: 'Gentium Book Basic', serif;
+                    margin: 1em 0;
+                    margin-top: 0;
+                }
+            }
+    
+            .grid{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 50px;
+                margin-top: 1em;
+                width: 100%;
+                .grid_1{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    height: auto;
+                    .subtitle{
+                        position: relative;
+                        display: block;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                        letter-spacing: 1px;
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                    div{
+                        margin: 10px;
+                        h4{
+                            position: relative;
+                            text-transform: uppercase;
+                            font-size: 1.1rem;
+                            margin-bottom: .5em;
+                        }
+                        address{
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                .grid_2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: unset;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: auto;
+                    gap: 10px;
+                    .subtitle{
+                        position: relative;
+                        display: block;
+                        font-size: 1.3rem;
+                        line-height: 1.2;
+                        letter-spacing: .5px;
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                    div{
+                        margin-right: 10px;
+                        img{
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                
             }
         }
     }
-    .contactImg{
-        position: absolute;
-        // top: 0;
-        right: 0;
-        z-index: 0;
-        width: 60%;
+}
+
+@media (min-width: 990px) {
+    .contacts{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+        padding-top: 70px;
+        overflow: hidden;
+        max-width: 1650px;
+        margin: 0 auto;
+        background-color: #000000;
+
+        .container{
+            position: relative;
+            display: block;
+            padding: 2em 3em;
+            width: 80%;
+            min-height: 700px;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            z-index: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+    
+            .text{
+                position: relative;
+                display: block;
+                padding-right: 0em;
+                max-width: 80%;
+                .title{
+                    position: relative;
+                    display: block;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    font-family: 'Gentium Book Basic', serif;
+                    margin: 1em 0;
+                    
+                }
+                .subtitle{
+                    position: relative;
+                    display: block;
+                    font-size: 1.25rem;
+                    line-height: 1.2;
+                    letter-spacing: .5px;
+                    width: 60%;
+                }
+            }
+    
+            .grid{
+                position: relative;
+                display: flex;
+                flex-direction: unset;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 50px;
+                margin-top: 1em;
+                width: 100%;
+                .grid_1{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 50%;
+                    height: auto;
+                    .subtitle{
+                        position: relative;
+                        display: block;
+                        font-size: 1.2rem;
+                        line-height: 1.2;
+                        letter-spacing: .5px;
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                    div{
+                        margin: 10px;
+                        h4{
+                            position: relative;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            margin-bottom: .5em;
+                        }
+                    }
+                }
+                .grid_2{
+                    position: relative;
+                    display: flex;
+                    flex-direction: unset;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    width: 50%;
+                    height: auto;
+                    .subtitle{
+                        position: relative;
+                        display: block;
+                        font-size: 1.2rem;
+                        line-height: 1.2;
+                        letter-spacing: .5px;
+                        width: 100%;
+                        margin-bottom: 1em;
+                    }
+                    div{
+                        margin-right: 10px;
+                        img{
+                            position: relative;
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 }

@@ -10,35 +10,6 @@ $lightgray: #40484F;
 $text-black: #1D1D1D;
 $text-gray: #a9a9a9;
 
-// .revival {
-//     position: relative;
-//     display: block;
-//     width: 100%;
-//     height: auto;
-//     background-color: #1D1D1D;
-//     padding: 0 5em;
-//     padding-top: 100px;
-//     padding-bottom: 80px;
-
-//     .grid{
-//         position: relative;
-//         width: 100%;
-//         height: auto;
-//         display:flex;
-//         flex-wrap: wrap;
-//         justify-content: center;
-//         align-items: center;
-//         // background-color: #000000;
-
-//         .article{
-//             position: relative;
-//             flex: 200px;
-//             // background-color:yellowgreen;
-//             margin: 5px;
-//         }
-//     }
-// }
-
 // COLORS
 $black : #000000;
 // $lightblack: #0A0A0A;
@@ -57,10 +28,10 @@ $text-gray: #a9a9a9;
     display: block;
     width: 100%;
     height: auto;
-    background-color: #1D1D1D;
+    background-color: #000000;
     padding: 0em;
     padding-top: 0em;
-    padding-bottom: 1em;
+    padding-bottom: 0em;
     .article {
         position: relative;
         width: 100%;
@@ -71,14 +42,9 @@ $text-gray: #a9a9a9;
         align-items: center;
         background-color: #000000;
         color: white;
-        padding: 0em;
+        padding-top: 0px;
         border-radius: 4px;
         div{
-            &:first-child{
-                max-width: 60%;
-                // padding: 0 40px;
-                // z-index: 2;
-            }
             display: block;
             // width: 90%;
         }
@@ -93,12 +59,18 @@ $text-gray: #a9a9a9;
             color: $text-gray;
             text-align: center;
         }
+        .img{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 60vh;
+        }
         .textContent{
             position: relative;
             display: inline-block;
             width: 90%;
             margin: auto;
-            margin-top: -160px;
+            margin-top: 0px;
 
             .title{
                 position: relative;
@@ -111,13 +83,13 @@ $text-gray: #a9a9a9;
                 font-size: 2rem;
                 font-family: 'Gentium Book Basic', serif;
                 padding: 20px 0;
+                font-weight: normal;
             }
     
             div{
                 font-size: 1rem;
                 line-height: 1.5;
                 margin-bottom: .5em;
-        // text-indent: 50px;
                 color: $text-gray;
                 letter-spacing: 0.5px;
                 p{
@@ -131,9 +103,6 @@ $text-gray: #a9a9a9;
 
 @media (min-width: 990px) {
     .revival{
-        padding: 0 2em;
-        padding-top: 5px;
-        padding-bottom: 50px;
         .article {
             position: relative;
             width: 100%;
@@ -145,16 +114,9 @@ $text-gray: #a9a9a9;
             align-items: center;
             background-color: #000000;
             color: white;
-            padding: 0em 0em 2em;
             border-radius: 4px;
             div{
-                &:first-child{
-                    max-width: 60%;
-                    // padding: 0 40px;
-                    // z-index: 2;
-                }
                 display: block;
-                // width: 90%;
             }
             .excerpt{
                 position: absolute;
@@ -167,12 +129,16 @@ $text-gray: #a9a9a9;
                 color: $text-gray;
                 text-align: center;
             }
+            .img{
+                width: 100%;
+                height: 100vh;
+            }
             .textContent{
                 position: relative;
                 display: inline-block;
                 width: 60%;
                 margin: auto;
-                margin-top: -160px;
+                max-width: 750px;
     
                 .title{
                     position: relative;
@@ -188,10 +154,9 @@ $text-gray: #a9a9a9;
                 }
         
                 div{
-                    font-size: 1.3rem;
+                    font-size: 1.1rem;
                     line-height: 1.5;
                     margin-bottom: .5em;
-            // text-indent: 50px;
                     color: $text-gray;
                     letter-spacing: 0.5px;
                     p{

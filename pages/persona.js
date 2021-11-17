@@ -13,10 +13,6 @@ const Personas = ({personas}) => {
                         <PersonasCard persona={persona} />
                     ))
                 }
-                
-                {/* <PersonasCard /> */}
-                {/* <PersonasCard /> */}
-                {/* <PersonasCard /> */}
             </section>
         </section>
            

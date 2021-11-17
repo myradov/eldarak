@@ -15,20 +15,26 @@ const About = ({data}) => {
         <>
           <section className={styles.about}>
             <article className={styles.article}>
-                <div className={styles.excerpt}>
-                    <h4>{t.comment}</h4>
-                </div>
+              <section className={styles.title}>
+                <h2 className={styles.h2}>{t.title}</h2>
+              </section>
+              <section className={styles.content}>
                 <div className={styles.textContent}>
-                    <h2 className={styles.title}>{t.title}</h2>
-                    <p>{t.content}</p>
+                    <h4>{t.content}</h4>
                 </div>
-                <Image
-                  src={`http://localhost:8055/assets/${data.data.banner.id}`}
-                  // layout="responsive"
-                  width={1300}
-                  height={760}
-                  quality={30}
-                />
+                <div className={styles.img}>
+                  <Image
+                    src={`http://localhost:8055/assets/${data.data.banner.id}`}
+                    // layout="fill"
+                    width={6157}
+                    height={4424}
+                    quality={30}
+                  />
+                </div>
+              </section>
+                {/* <div className={styles.excerpt}>
+                    <h4>{t.comment}</h4>
+                </div> */}
             </article>
           </section> 
         </>

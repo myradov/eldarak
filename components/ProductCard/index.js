@@ -1,49 +1,38 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from './ProductCard.module.scss'
 
-import productImg from '../../public/carpet_1.jpg'
+// import productImg from '../../public/carpet_1.jpg'
 
-const index = () => {
+const index = ({product}) => {
+    // console.log(product)
+    const router = useRouter()
+    const { locale } = router
+
+    const t = locale === 'en' ? product.translations[0] : locale === 'ru' ? product.translations[1] : locale === 'tm' ? product.translations[2]: ''
+
     return (
         <>
             <article className={styles.product}>
-                <Link href="#">
+                <Link href={`shop/${product.id}`}>
                     <a>
-                        <Image src={productImg} layout="responsive" className={styles.Img} alt="products"/>
+                        <Image src={`http://localhost:8055/assets/${product.banner.id}`} width={3386} height={3648} className={styles.Img} alt="products"/>
                         <div className={styles.info}>
                             <h2 className={styles.title}>
-                                <Link href="#">
-                                    <a>
-                                        <h2 className={styles.title}>Santos de cartier watch</h2>
-                                    </a>
-                                </Link>
+                                {t.title}
                             </h2>
-                            <h4 className={styles.subtitle}>Medium model, automatic movement</h4>
-                        </div>
-                        <div className={styles.btn}>
-                            <Link href="#">
-                                <a>Send Inquiry</a>
-                            </Link>
+                            {/* <h4 className={styles.subtitle}>{t.description}</h4> */}
                         </div>
                     </a>
                 </Link>
-                
-            </article>
-            {/* <article className={styles.product}>
-                <Image src={productImg} layout="responsive"/>
-                <div className={styles.info}>
-                    <h2 className={styles.title}>Santos de cartier watch</h2>
-                    <h4 className={styles.subtitle}>Medium model, automatic movement</h4>
-                </div>
                 <div className={styles.btn}>
-                    <Link href="#">
-                        <a>Send Inquiry</a>
+                    <Link href="/contacts">
+                        <a>{locale === 'en' ? 'Send Request' : locale === 'ru' ? 'Отправить заявку' : locale === 'tm' ? 'Teklip ugradyň' : ''}</a>
                     </Link>
                 </div>
-            </article> */}
-            
+            </article>
         </>
     )
 }
