@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import styles from '../../styles/Personas.module.scss'
 
 
@@ -28,8 +28,8 @@ const Persona = ({personas}) => {
                     </div>
                 </aside>
             </article>
-            <button onClick={() => {router.back()}}>back</button>
-            <Link href="#"><a className={styles.backBtn}>Go back</a></Link>
+            {/* <button onClick={() => {router.back()}}>back</button> */}
+            {/* <Link href="#"><a className={styles.backBtn}>Go back</a></Link> */}
         </>
     )
 }

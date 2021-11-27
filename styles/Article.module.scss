@@ -18,7 +18,7 @@
         position: relative;
         display: block;
         font-family: 'Gentium Book Basic', serif;
-        font-size: 3rem;
+        font-size: 2.3rem;
         // margin: 1em auto;
         font-weight: normal;
         color: white;
@@ -112,6 +112,11 @@
         padding: 70px 0;
         max-width: 1440px;
         margin: 0 auto;
+        .articleTitle{
+            font-size: 3rem;
+            // margin: 1em auto;
+            margin: .7em 0;
+        }
     }
     // Article open
     .article{
@@ -129,7 +134,7 @@
             position: relative;
             display: block;
             font-family: 'Gentium Book Basic', serif;
-            font-size: 2rem;
+            font-size: 2.3rem;
             margin: 1em auto;
             font-weight: normal;
         }

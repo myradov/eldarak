@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/Shop.module.scss'
+import Modal from '../../components/Modal'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -18,17 +19,19 @@ SwiperCore.use([Navigation,Thumbs]);
 
 const Product = ({carpets}) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    const [showModal, setShowModal] = useState(false);
     
     const router = useRouter()
     const { locale } = router
 
-    console.log(carpets)
+    // console.log(carpets)
 
     const t = locale === 'en' ? carpets.data.translations[0] : locale === 'ru' ? carpets.data.translations[1] : locale === 'tm' ? carpets.data.translations[2] : ''
     
     return (
         <>
-            <article className={styles.product}>
+            <article className={styles.product} >
                 <div className={styles.productImg}>
                     {
                         <>
@@ -43,7 +46,7 @@ const Product = ({carpets}) => {
                                     <SwiperSlide>
                                         <Link href={`http://localhost:8055/assets/${image.directus_files_id}`}>
                                             <a className={styles.ImgWrap}>
-                                                <Image src={`http://localhost:8055/assets/${image.directus_files_id}`} width={3386} height={3648} layout="responsive" objectFit="screen" objectPosition="center"/>
+                                                <Image src={`http://localhost:8055/assets/${image.directus_files_id}`}  layout="fill" objectFit="contain" objectPosition="center"/>
                                             </a>
                                         </Link>
                                     </SwiperSlide>
@@ -59,7 +62,10 @@ const Product = ({carpets}) => {
                                 {
                                     carpets.data.gallery.map(image =>(
                                         <SwiperSlide>
-                                            <Image src={`http://localhost:8055/assets/${image.directus_files_id}`} width={3386} height={3648} />
+                                            <div className={styles.thumbs}>
+                                                <Image src={`http://localhost:8055/assets/${image.directus_files_id}`} layout="fill" objectFit="contain" objectPosition="center"/>
+                                            </div>
+                                            {/* <Image src={`http://localhost:8055/assets/${image.directus_files_id}`} width={3386} height={3648}layout="fill" /> */}
                                         </SwiperSlide>
                                         
                                     ))
@@ -77,13 +83,11 @@ const Product = ({carpets}) => {
                     </section>
                     <div dangerouslySetInnerHTML={{__html: t.content}} className={styles.productContent}>
                     </div>
-                    <div className={styles.btn}>
-                        <Link href="/contacts">
-                            <a>{locale === 'en' ? 'Send Request' : locale === 'ru' ? 'Отправить заявку' : locale === 'tm' ? 'Teklip ugradyň' : ''}</a>
-                        </Link>
+                    <div className={styles.btn} onClick={() => setShowModal(true)}>
+                        <a  className="btn btn-">{locale === 'en' ? 'Send Request' : locale === 'ru' ? 'Отправить заявку' : locale === 'tm' ? 'Teklip ugradyň' : ''}</a>
                     </div>
                 </aside>
-                
+                <Modal onClose={() => setShowModal(false)} show={showModal}/>
             </article>
         </>
     )
@@ -102,7 +106,7 @@ export async function getStaticProps({params}){
 }
 
 export async function getStaticPaths({locales}){
-    const res = await fetch(`http://localhost:8055/items/carpets`)
+    const res = await fetch(`http://localhost:8055/items/carpets?fields=id,banner.*,gallery.*,translations.*`)
     const carpets = await res.json()
 
     const paths = []

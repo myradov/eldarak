@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import styles from '../styles/About.module.scss'
-// import aboutImage from '../public/slider.jpg'
 import { useRouter } from 'next/router'
 
 
@@ -25,16 +24,13 @@ const About = ({data}) => {
                 <div className={styles.img}>
                   <Image
                     src={`http://localhost:8055/assets/${data.data.banner.id}`}
-                    // layout="fill"
+                    layout="responsive"
                     width={6157}
                     height={4424}
-                    quality={30}
+                    quality={80}
                   />
                 </div>
               </section>
-                {/* <div className={styles.excerpt}>
-                    <h4>{t.comment}</h4>
-                </div> */}
             </article>
           </section> 
         </>

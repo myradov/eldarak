@@ -1,9 +1,11 @@
 .container {
   width: 100%;
-  height: 100vh;
+  max-height: 100%;
   // min-height: 100vh;
   display: block;
   background-color: #1D1D1D;
+  position: relative;
+  overflow-y: hidden !important;
 }
 
 // COLORS
@@ -24,45 +26,101 @@ $text-gray: #999999;
   display: block;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 //   filter: opacity(1);
 }
+
 .bgWrap {
   position: relative;
   display: block;
   width: 100%;
   height: 100vh;
-  background-image: url("/carpet_4.jpg");
+  background-image: url('../public/carpet_4.jpg');
   background-position: center top;
   background-repeat: repeat;
   background-size: cover;
   background-origin: border-box;
   background-attachment: fixed;
-  overflow: hidden;
+  // overflow: hidden;
   z-index: 1;
+  
+  // cursor: none;
+  // --cursorX: 50vw;
+  // --cursorY: 50vh; 
+  // &:before{
+  //   content: '';
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: fixed;
+  //   pointer-events: none;
+  //   background: radial-gradient(
+  //     circle 10vmax at var(--cursorX) var(--cursorY),
+  //     rgba(0,0,0,0) 0%,
+  //     rgba(0,0,0,.5) 80%,
+  //     rgba(0,0,0,.95) 100%
+  //   )
+  // }
 }
 
-#canvas{
-    width: 500px;
-    height: 500px;
-    border: solid 1px black;
-    margin: 20px;
-    background-image: url("/carpet_3.jpg");
-    background-size: 150% 150%;
-    cursor: none;
-}
+
 // .bgWrap > div:first-child img{
 //   opacity: 1;
 // }
 
+// .shadow {
+//    /* Flashlight Overlay */
+//   :root {
+//     cursor: none;
+//     --cursorX: 50vw;
+//     --cursorY: 50vh;
+//   }
+//   :root:before {
+//     content: '';
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     pointer-events: none;
+//     background: radial-gradient(
+//       circle 10vmax at var(--cursorX) var(--cursorY),
+//       rgba(0,0,0,0) 0%,
+//       rgba(0,0,0,.5) 80%,
+//       rgba(0,0,0,.95) 100%
+//     )
+//   }
+// }
+
+
+// .shadow{
+//   cursor: none;
+//   --cursorX: 50vw;
+//   --cursorY: 50vh;
+//   &:before{
+//     content: '';
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     pointer-events: none;
+//     background: radial-gradient(
+//       circle 10vmax at var(--cursorX) var(--cursorY),
+//       rgba(0,0,0,0) 0%,
+//       rgba(0,0,0,.5) 80%,
+//       rgba(0,0,0,.95) 100%
+//     )
+//   }
+// }
+
 .shadow {
-  position: absolute;
+  position: fixed;
   width: 200vw;
   height: 200vh;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   background-image: radial-gradient(circle closest-corner, transparent 8%, rgb(255, 255, 255) 10%);
-  background-image: radial-gradient(ellipse closest-corner, transparent 2%, rgba(0, 0, 0, 0.930) 8%);
+  background-image: radial-gradient(circle farthest-corner, transparent 2%, rgba(0, 0, 0, 0.930) 15%);
 //   background-image: linear-gradient(#ff8a00, #e52e71, );
 }
 
@@ -103,7 +161,8 @@ $text-gray: #999999;
       display: block;
       width: 100%;
       height: 100vh;
-      background-image: url("/carpet_3.jpg");
+      
+      background-image: url('../public/carpet_3.JPG');
       background-position: center center;
       background-repeat: repeat;
       background-size: contain;
@@ -113,21 +172,12 @@ $text-gray: #999999;
       z-index: 1;
     }
 
-    #canvas{
-        width: 500px;
-        height: 500px;
-        border: solid 1px black;
-        margin: 20px;
-        background-image: url("/carpet_3.jpg");
-        background-size: 150% 150%;
-        cursor: none;
-    }
     // .bgWrap > div:first-child img{
     //   opacity: 1;
     // }
     
     .shadow {
-      position: absolute;
+      position: fixed;
       width: 200vw;
       height: 200vh;
       left: 50%;

@@ -1,0 +1,171 @@
+.modal_container{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 99;
+    .modal_title{
+        position: relative;
+        display: block;
+        font-size: 1.3rem;
+        font-weight: normal;
+    }
+    .modal{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        height:auto;
+        background-color: black;
+        padding: 3em 1.5em;
+        .modal_body{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            height: auto;
+            font-family: Lato;
+            label{
+                display: block;
+                min-width: 300px;
+                width: 50%;
+                // background-color: antiquewhite;
+            }
+            input{
+                min-width: 300px;
+                padding: 8px 12px;
+                font-family: 'inherit';
+            }
+            textarea{
+                min-width: 300px;
+                padding: 8px 12px;
+                font-family: 'inherit';
+            }
+        }
+        .btn{
+            position: relative;
+            display: block;
+            min-width: 300px;
+            width: 50%;
+            padding: .5em 1em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+    .modal_close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        padding: 1em;
+        img{
+            position: relative;
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+    }
+   
+}
+
+@media (min-width: 992px) {
+    .modal_container{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color:rgba(0,0,0,0.5);
+        z-index: 99;
+        .modal_title{
+            position: relative;
+            display: block;
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+        .modal{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            width: 60%;
+            max-width: 600px;
+            margin: 0 auto;
+            height:auto;
+            background-color: black;
+            padding: 3em 1.5em;
+            .modal_body{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 100%;
+                height: auto;
+                font-family: Lato;
+                label{
+                    display: block;
+                    min-width: 300px;
+                    width: 50%;
+                    // background-color: antiquewhite;
+                }
+                input{
+                    min-width: 300px;
+                    padding: 8px 12px;
+                    font-family: 'inherit';
+                }
+                textarea{
+                    min-width: 300px;
+                    padding: 8px 12px;
+                    font-family: 'inherit';
+                }
+            }
+            .btn{
+                position: relative;
+                display: block;
+                min-width: 300px;
+                width: 50%;
+                padding: .5em 1em;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+        .modal_close{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            padding: 1em;
+            img{
+                position: relative;
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+        }
+       
+    }
+}

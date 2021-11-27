@@ -13,8 +13,9 @@
         display: block;
         position: relative;
         flex: 100%;
+        width: 100%;
         height: auto;
-
+        min-height: 210px;
         .image{
             position: absolute;
             top: 0;
@@ -84,6 +85,7 @@
             position: relative;
             flex: 60%;
             height: auto;
+            min-height: 400px;
     
             .image{
                 position: absolute;

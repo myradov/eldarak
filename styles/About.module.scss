@@ -39,8 +39,11 @@ $text-gray: #a9a9a9;
             padding: 1em 0em;
             background-color: #0b0b0b;
             padding-left: 2em;
+            position: sticky;
+            top: 70px;
+            
             .h2{
-                position: relative;
+                // position: relative;
                 color: white;
                 text-align: left;
                 font-size: 2rem;
@@ -48,6 +51,7 @@ $text-gray: #a9a9a9;
                 font-weight: 500;
                 font-style: normal;
                 /* padding: 0 20px; */
+                background-color: #0b0b0b;
             }
         }
         .content{
@@ -56,15 +60,15 @@ $text-gray: #a9a9a9;
             width: 100%;
             height: auto;
             margin-top: 0em;
+            background-color: #000000;
 
             .textContent{
                 position: relative;
                 display: inline-block;
                 width: 100%;
-                // margin: auto;
                 text-align: left;
-                // background-color: red;
                 padding: 0 2em;
+                padding-top: 0.5em;
                 h4{
                     font-size: 1rem;
                     line-height: 1.4;
@@ -78,8 +82,10 @@ $text-gray: #a9a9a9;
                 position: relative;
                 display: block;
                 width: 100%;
+                // min-height: 600px;
+                height: 100%;
                 div{
-                    position: relative;
+                    // position: relative;
                 }
         }
 
@@ -147,6 +153,8 @@ $text-gray: #a9a9a9;
                 // max-height: 100px;
                 height: auto;
                 padding: 1em 5em;
+                position: sticky;
+                top: 70px;
                 // -webkit-box-shadow: 0px -1px 10px 6px rgba(118, 118, 118, 0.75);
                 // -moz-box-shadow: 0px -1px 10px 6px rgba(118, 118, 118, 0.75);
                 // box-shadow: 0px -1px 10px 6px rgba(118, 118, 118, 0.75);

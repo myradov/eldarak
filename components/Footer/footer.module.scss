@@ -36,20 +36,32 @@
             gap: 14px;
 
             li{
+                position: relative;
+                display: block;
                 list-style-type:none;
                 // margin-right: 1em;
                 // gap: 10px;
             }
             li.menulist{
-                color: white;
+                display: block;
+                color: rgb(119, 119, 119);;
                 white-space: nowrap;
                 // background-color: yellowgreen;
+                a{
+                    position: relative;
+                    display: block;
+                    padding: .5em;
+                    &:hover{
+                        color: white
+                    }
+                }
             }
             li.sociallist{
                 display: inline-block;
                 // background-color: turquoise;
                 a{
                     display: block;
+                    padding: 1em;
                     // width: 20px;
                     img{
                         width: 40px;

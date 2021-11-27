@@ -4,13 +4,14 @@ import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 import Header from '../Header'
 import Footer from '../Footer/Footer'
-
+import { useRouter } from 'next/router'
 
 const name = "ED"
-export const siteTitle = "Sample Website"
+export const siteTitle = "Eldarak website"
 
 
 export default function MainLayout({ children }) {
+    const {pathname} = useRouter()
     return (
         <>
             <Head>
@@ -34,7 +35,7 @@ export default function MainLayout({ children }) {
             </Head>
             <Header />
             <main id={styles.container}>{children}</main>
-            <Footer />
+            { pathname !== '/' && <Footer />}
         </>
     )
 }

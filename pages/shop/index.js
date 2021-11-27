@@ -15,7 +15,7 @@ const Shop = ({carpets}) => {
                 <main className={styles.products}>
                     {
                         carpets.data.map(product => (
-                            <ProductCard product={product} />
+                            <ProductCard product={product} key={product.id}/>
                         ))
                     }
                 </main>

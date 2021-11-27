@@ -6,7 +6,8 @@ import Image from 'next/image'
 import useSWR from 'swr'
 
 // images
-import logo from '../../public/ellogo2.svg'
+// import logo from '../../public/eldarak.svg'
+import logo from '../../public/eldarak1.png'
 import hamburger from '../../public/menu.svg'
 import closeBtn from '../../public/closebtn.svg'
 
@@ -31,7 +32,7 @@ const Navigation = () => {
                 <div className={styles.logo}>
                     <Link href="/">
                         <a>
-                            <Image src={logo} alt="El Darak Logo" width={40} height={40}/>
+                            <Image src={logo} alt="El Darak Logo" width={794} height={1123}/>
                         </a>
                     </Link>
                 </div> 

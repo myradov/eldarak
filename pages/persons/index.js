@@ -7,7 +7,7 @@ const Personas = ({personas}) => {
     const router = useRouter()
     const { locale } = router
 
-    const t = locale === 'en' ? 'Personas' : locale === 'ru' ? 'Персоны' : locale === 'tm' ? 'Şahsyýetler' : ''
+    const t = locale === 'en' ? 'Persons' : locale === 'ru' ? 'Персоны' : locale === 'tm' ? 'Şahsyýetler' : ''
     return (
         <>
         <section className={styles.personas}>

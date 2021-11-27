@@ -17,13 +17,13 @@ const Article = ({articles}) => {
 
             <article className={styles.article}>
                 <div className={styles.articleImg}>
-                    <Image src={`http://localhost:8055/assets/${articles.data.banner}`} width={4032} height={2128} layout="fill" objectFit="cover" objectPosition="left" />
+                    <Image src={`http://localhost:8055/assets/${articles.data.banner}`} layout="fill" objectFit="cover" objectPosition="center" />
                 </div>
                 <h2 className={styles.articleTitle}>{t.title}</h2>
                 <div className={styles.articleContent} dangerouslySetInnerHTML={{__html: t.content}}>
                 </div>
 
-                <button onClick={() => {router.back()}}>Go back</button>
+                {/* <button onClick={() => {router.back()}}>Go back</button> */}
             </article>
 
         </>
