@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
-    align-items:center;
+    align-items:flex-start;
     flex-wrap: wrap;
     width: 100%;
     height:auto;
@@ -11,23 +11,22 @@
     margin-bottom: 50px;
     overflow: hidden;
     transition: all .3s ease;
+    padding: 0 5px;
     // background-color: rgb(144, 0, 255);
-    &:hover{
-        background-color: black;
-    }
+    
 
     .cardImg{
         display: block;
         position: relative;
         margin: 0 auto;
-        width: 100%;
+        width: 45%;
         height: auto;
     }
 
     .cardTxt{
         position: relative;
         display: block;
-        width: 100%;
+        width: 55%;
         height: auto;
         color: white;
         margin: 0 auto;
@@ -37,16 +36,28 @@
             position: relative;
             display: block;
             margin: .5em 0;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             font-weight: normal;
             font-family: 'Gentium Book Basic', serif;
+            white-space: nowrap;
         }
         p{
             position: relative;
             display: block;
-            font-size: 1rem;
+            font-size: .9rem;
             line-height: 1.3;
             margin-bottom: .5em;
+        }
+        .readmore{
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: normal;
+            color: #fff;
+            &:hover{
+                text-decoration: dashed;
+            }
         }
     }
 }
@@ -63,6 +74,10 @@
         min-width: 400px;
         height: auto;
         max-height: 600px;
+        padding: 0;
+        &:hover{
+            background-color: black;
+        }
     
         .cardImg{
             display: block;
@@ -83,14 +98,28 @@
             
             h2{
                 margin: .5em 0;
-                font-size: 1.5rem;
+                font-size: 2rem;
                 font-weight: normal;
                 font-family: 'Gentium Book Basic', serif;
                 word-wrap: wrap;
             }
             p{
-                font-size: 1rem;
+                font-size: 1.3rem;
                 line-height: 1.3;
+            }
+            .readmore{
+                position: relative;
+                display: block;
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: normal;
+                // color: white;
+                margin-top: 1em;
+                text-decoration: none white;
+                transition: all .3s linear;
+                &:hover{
+                    text-decoration: underline white;
+                }
             }
         }
     } 

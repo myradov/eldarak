@@ -15,7 +15,7 @@ const index = ({articles}) => {
                 <h1 className={styles.articleTitle}>{t}</h1>
                 {
                     articles.data.map(article => (
-                        <ArticleCard article={article} />
+                        <ArticleCard article={article} key={article.id}/>
                     ))
                 }
             </section>

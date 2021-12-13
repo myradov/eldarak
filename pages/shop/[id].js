@@ -37,6 +37,7 @@ const Product = ({carpets}) => {
                         <>
                             <Swiper
                                 spaceBetween={10} 
+                                slidesPerView={1}
                                 navigation={true} 
                                 thumbs={{ swiper: thumbsSwiper }} 
                                 className="mySwiper2"
@@ -44,11 +45,15 @@ const Product = ({carpets}) => {
                                 {
                                 carpets.data.gallery.map(image =>(
                                     <SwiperSlide>
-                                        <Link href={`http://localhost:8055/assets/${image.directus_files_id}`}>
+                                        {/* <Link href={`http://localhost:8055/assets/${image.directus_files_id}`}> */}
                                             <a className={styles.ImgWrap}>
-                                                <Image src={`http://localhost:8055/assets/${image.directus_files_id}`}  layout="fill" objectFit="contain" objectPosition="center"/>
+                                                <label htmlFor="zoominout">
+                                                    <Image src={`http://localhost:8055/assets/${image.directus_files_id}`}  layout="fill" objectFit="contain" objectPosition="center"/>
+                                                </label>
+                                                <input type="checkbox" id="zoominout"/>
+                                                {/* <Image src={`http://localhost:8055/assets/${image.directus_files_id}`}  layout="fill" objectFit="contain" objectPosition="center"/> */}
                                             </a>
-                                        </Link>
+                                        {/* </Link> */}
                                     </SwiperSlide>
                                 ))
                                 }

@@ -3,12 +3,13 @@ import styles from './Navigation.module.scss'
 import {useState} from 'react'
 import {useRouter} from 'next/router'
 import Image from 'next/image'
-import useSWR from 'swr'
+// import useSWR from 'swr'
+import menu from '../../menu.json'
 
 // images
 // import logo from '../../public/eldarak.svg'
 import logo from '../../public/eldarak1.png'
-import hamburger from '../../public/menu.svg'
+import hamburger from '../../public/menu_ed.svg'
 import closeBtn from '../../public/closebtn.svg'
 
 
@@ -16,8 +17,8 @@ import closeBtn from '../../public/closebtn.svg'
 
 const Navigation = () => {
     
-    const fetcher = async url => await fetch(url).then(r => r.json())
-    const { data: menulist } = useSWR('http://localhost:8055/items/menu?fields=id,title,translations.*', fetcher)
+    // const fetcher = async url => await fetch(url).then(r => r.json())
+    // const { data: menulist } = useSWR('http://localhost:8055/items/menu?fields=id,title,translations.*', fetcher)
 
     const router = useRouter()
     const { locale } = router
@@ -37,9 +38,21 @@ const Navigation = () => {
                     </Link>
                 </div> 
                 <ul className={styles.menulist}>
-                    {
+                    {/* {
                         menulist && 
                         menulist.data.map(item => (
+                            <li key={item.id}>
+                                <Link href={`/${item.title}`}>
+                                    <a>{
+                                    locale === 'en' ? item.translations[0].title : locale === 'ru' ? item.translations[1].title : locale === 'tm' ? item.translations[2].title : ''
+                                    }</a>
+                                </Link>
+                            </li>
+                        ))
+                    } */}
+                    {
+                        menu && 
+                        menu.map(item => (
                             <li key={item.id}>
                                 <Link href={`/${item.title}`}>
                                     <a>{
@@ -57,7 +70,6 @@ const Navigation = () => {
                         router.locales.map((locale) => (
                         <li key={locale}>
                             <Link href={router.asPath} locale={locale}><a>{locale}</a></Link>
-                            {/* <Link href={`http://localhost:8055/items/pages?fields=translations.*&deep[translations][_filter][languages_code][_eq]=ru-RU`} locale={locale}><a>{locale}</a></Link> */}
                         </li>
                         ))
                     }
@@ -82,14 +94,13 @@ const Navigation = () => {
                 </div> */}
                 <ul className={styles.menulist} onClick={showSidebar}>
                     {
-                        menulist && 
-                        menulist.data.map(item => (
+                        menu && 
+                        menu.map(item => (
                             <li key={item.id}>
                                 <Link href={`/${item.title}`}>
                                     <a>{
                                     locale === 'en' ? item.translations[0].title : locale === 'ru' ? item.translations[1].title : locale === 'tm' ? item.translations[2].title : ''
                                     // item.translations[1].title
-                                    
                                     }</a>
                                 </Link>
                             </li>

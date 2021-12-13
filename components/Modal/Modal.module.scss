@@ -16,6 +16,7 @@
         display: block;
         font-size: 1.3rem;
         font-weight: normal;
+        margin-bottom: .5em;
     }
     .modal{
         position: relative;
@@ -23,7 +24,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 30px;
+        // gap: 30px;
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
@@ -36,7 +37,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            margin-bottom: 10px;
             width: 100%;
             height: auto;
             font-family: Lato;
@@ -44,6 +45,7 @@
                 display: block;
                 min-width: 300px;
                 width: 50%;
+                margin-bottom: .5em;
                 // background-color: antiquewhite;
             }
             input{
@@ -58,6 +60,8 @@
             }
         }
         .btn{
+            -webkit-appearance: none;
+            border-radius: 0;
             position: relative;
             display: block;
             min-width: 300px;
@@ -65,6 +69,8 @@
             padding: .5em 1em;
             text-transform: uppercase;
             cursor: pointer;
+            background-color: white;
+            border: none;
         }
     }
     .modal_close{

@@ -1,0 +1,146 @@
+[
+	{
+		"title": "about",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 2,
+				"menu_id": 6,
+				"languages_code": "en",
+				"title": "About Us"
+			},
+			{
+				"id": 3,
+				"menu_id": 6,
+				"languages_code": "ru",
+				"title": "О нас"
+			},
+			{
+				"id": 4,
+				"menu_id": 6,
+				"languages_code": "tm",
+				"title": "Biz hakda"
+			}
+		]
+	},
+	{
+		"title": "revival",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 5,
+				"menu_id": 7,
+				"languages_code": "en",
+				"title": "Revival"
+			},
+			{
+				"id": 6,
+				"menu_id": 7,
+				"languages_code": "ru",
+				"title": "Возраждение"
+			},
+			{
+				"id": 7,
+				"menu_id": 7,
+				"languages_code": "tm",
+				"title": "Dikeldiş"
+			}
+		]
+	},
+	{
+		"title": "articles",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 8,
+				"menu_id": 8,
+				"languages_code": "en",
+				"title": "Articles"
+			},
+			{
+				"id": 9,
+				"menu_id": 8,
+				"languages_code": "ru",
+				"title": "Стати"
+			},
+			{
+				"id": 10,
+				"menu_id": 8,
+				"languages_code": "tm",
+				"title": "Makalalar"
+			}
+		]
+	},
+	{
+		"title": "persons",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 11,
+				"menu_id": 9,
+				"languages_code": "en",
+				"title": "Persons"
+			},
+			{
+				"id": 12,
+				"menu_id": 9,
+				"languages_code": "ru",
+				"title": "Персоны"
+			},
+			{
+				"id": 13,
+				"menu_id": 9,
+				"languages_code": "tm",
+				"title": "Şahsyýetler"
+			}
+		]
+	},
+	{
+		"title": "shop",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 14,
+				"menu_id": 10,
+				"languages_code": "en",
+				"title": "Shop"
+			},
+			{
+				"id": 15,
+				"menu_id": 10,
+				"languages_code": "ru",
+				"title": "Магазин"
+			},
+			{
+				"id": 16,
+				"menu_id": 10,
+				"languages_code": "tm",
+				"title": "Dükan"
+			}
+		]
+	},
+	{
+		"title": "contacts",
+		"status": "draft",
+		"translations": [
+			{
+				"id": 17,
+				"menu_id": 11,
+				"languages_code": "en",
+				"title": "Contacts"
+			},
+			{
+				"id": 18,
+				"menu_id": 11,
+				"languages_code": "ru",
+				"title": "Контакты"
+			},
+			{
+				"id": 19,
+				"menu_id": 11,
+				"languages_code": "tm",
+				"title": "Habarlaşmak"
+			}
+		]
+	}
+]

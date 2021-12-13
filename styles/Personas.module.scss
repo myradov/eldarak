@@ -8,13 +8,12 @@
     .title{
         position: relative;
         display: block;
-        text-align: center;
+        text-align: left;
         font-family: 'Gentium Book Basic', serif;
         font-size: 2.3rem;
-        // margin: 1em auto;
         font-weight: normal;
         color: white;
-        margin: .7em 0;
+        margin: .7em .2em;
     }
 
     .cards{
@@ -28,7 +27,6 @@
         height: auto;
         max-width: 1250px;
         margin: 0 auto;
-        // background-color: royalblue
     }
 }
 
@@ -46,9 +44,9 @@
     margin: 0 auto;
 
     .personaImg{
-        position: sticky;
-        top: 80px;
-        width: 80%;
+        position: relative;
+        display: block;
+        width: 100%;
         // width: 50%;
 
     }
@@ -57,13 +55,14 @@
         width: 100%;
         padding: 10px;
         padding-top: 1em;
-        background-color: rgba(0, 0, 0, 0.3);
+        // background-color: rgba(0, 0, 0, 0.09);
         margin-top: 1em;
+        margin-bottom:1em;
         .personaTitle{
             font-family: 'Gentium Book Basic', serif;
             font-size: 1.5rem;
             font-weight: normal;
-            margin: 0 0 1em;
+            margin: 0 0 .5em;
         }
         .personaContent{
             font-family: 'Lato', 'Roboto', sans-serif;
@@ -150,13 +149,13 @@
                 font-family: 'Gentium Book Basic', serif;
                 font-size: 2rem;
                 font-weight: bold;
-                margin: 0 0 1em;
+                margin: 0 0 .5em;
             }
             .personaContent{
                 font-family: 'Lato', 'Roboto', sans-serif;
                 font-size: 1.3rem;
                 line-height: 1.3;
-    
+                width: 90%
             }
         }
     }

@@ -17,7 +17,7 @@ const Revival = ({item}) => {
                             src={`http://localhost:8055/assets/${item.data.banner.id}`}
                             layout="fill"
                             objectFit="cover"
-                            objectPosition="top center"
+                            objectPosition="center center"
                             // width={5472}
                             // height={3648}
                             quality={30}

@@ -67,7 +67,16 @@
             height: auto;
             min-height: 500px;
             background-color: black;
+            
+            input[type=checkbox]{
+                display: none;
+            }
+            input[type=checkbox]:checked ~ .ImgWrap img{
+                transform: scale(2);
+                cursor: zoom-out
+            }
         }
+        
         .thumbs{
             position: relative;
             display: block;
@@ -120,18 +129,19 @@
             position: relative;
             display: block;
             text-align: center;
-            width: 70%;
+            width: 100%;
             margin: 0 auto;
             padding: .5em .4em;
-            background-color: white;
+            background-color: black;
             cursor: pointer;
             transition: all .2s ease;
+            margin-top: .5em;
             
             a{
                 text-transform: uppercase;
                 font-size: .9rem;
                 font-weight: 600;
-                color: black;
+                color: white;
                 transition: all .3s ease;
             }
             &:hover {
@@ -211,7 +221,6 @@
                 width: 70%;
                 margin: 0 auto;
                 padding: .5em .4em;
-                background-color: white;
                 cursor: pointer;
                 transition: all .2s ease;
                 
@@ -219,7 +228,6 @@
                     text-transform: uppercase;
                     font-size: .9rem;
                     font-weight: 600;
-                    color: black;
                     transition: all .3s ease;
                 }
                 &:hover {
@@ -353,7 +361,6 @@
                 width: 70%;
                 margin-right: auto;
                 padding: .5em .4em;
-                background-color: white;
                 cursor: pointer;
                 transition: all .2s ease;
                 
@@ -361,7 +368,6 @@
                     text-transform: uppercase;
                     font-size: .9rem;
                     font-weight: 600;
-                    color: black;
                     transition: all .3s ease;
                 }
                 &:hover {

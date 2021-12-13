@@ -25,7 +25,11 @@ const index = ({persona}) => {
                                 </a>
                             </Link>
                             <p>{t.description}</p>
+                            <Link href={`/persons/${persona.id}`}>
+                                <a className={styles.readmore}>read more</a>
+                            </Link>
                         </div>
+                       
                     </a>
                 </Link>
                 
