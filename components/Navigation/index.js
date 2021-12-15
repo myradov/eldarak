@@ -53,7 +53,7 @@ const Navigation = () => {
                     {
                         menu && 
                         menu.map(item => (
-                            <li key={item.id}>
+                            <li key={item.title}>
                                 <Link href={`/${item.title}`}>
                                     <a>{
                                     locale === 'en' ? item.translations[0].title : locale === 'ru' ? item.translations[1].title : locale === 'tm' ? item.translations[2].title : ''
@@ -96,7 +96,7 @@ const Navigation = () => {
                     {
                         menu && 
                         menu.map(item => (
-                            <li key={item.id}>
+                            <li key={item.title}>
                                 <Link href={`/${item.title}`}>
                                     <a>{
                                     locale === 'en' ? item.translations[0].title : locale === 'ru' ? item.translations[1].title : locale === 'tm' ? item.translations[2].title : ''
