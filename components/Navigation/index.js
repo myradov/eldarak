@@ -8,7 +8,8 @@ import menu from '../../menu.json'
 
 // images
 // import logo from '../../public/eldarak.svg'
-import logo from '../../public/eldarak1.png'
+// import logo from '../../public/eldarak1.png'
+import logo from '../../public/edlogo.svg'
 import hamburger from '../../public/menu_ed.svg'
 import closeBtn from '../../public/closebtn.svg'
 

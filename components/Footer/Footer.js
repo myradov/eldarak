@@ -18,7 +18,7 @@ export default function Footer(){
           <div className={styles.sections}>
             <Link href="/">
               <a className={styles.logo}>
-                <img src="/eldarak1.png" alt="Vercel Logo"/>
+                <img src="/edlogo.svg" alt="Edlarak Logo"/>
               </a>
             </Link>
           </div>

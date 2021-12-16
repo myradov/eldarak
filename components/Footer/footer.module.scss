@@ -19,11 +19,12 @@
         flex-grow: 1;
         .logo{
             width: 100%;
+            height: auto;
             position: relative;
             display: block;
             img{
                 margin: 0 auto;
-                width: 100px;
+                width: 50px;
                 height: auto;
             }
         }
